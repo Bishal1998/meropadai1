@@ -65,7 +65,7 @@ class CourseCard extends StatelessWidget {
       child: ClipRRect(
         borderRadius: BorderRadius.all(Radius.circular(10.0)),
           child: InkWell(
-            onTap: (){Navigator.of(context).push(MaterialPageRoute(builder: (context) { return routePage();}),);},
+            onTap: () {Navigator.of(context).push(MaterialPageRoute(builder: (context)=>routePage));},
             child: Stack(
             children: <Widget>[
               Container(

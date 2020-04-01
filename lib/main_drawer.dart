@@ -4,6 +4,8 @@ import 'package:meropadai/class11.dart';
 import 'package:meropadai/class12.dart';
 import 'package:meropadai/csit/csit_final.dart';
 import 'package:meropadai/see/see_final.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:share/share.dart';
 
 class MainDrawer extends StatelessWidget {
   @override
@@ -35,7 +37,9 @@ class MainDrawer extends StatelessWidget {
            CustomListTile(Icons.library_books,'Class 11',()=>{{Navigator.of(context).pop()} , Navigator.of(context).push(MaterialPageRoute(builder: (context){return Class11();}),)}),
            CustomListTile(Icons.library_books,'Class 12',()=>{{Navigator.of(context).pop()} , Navigator.of(context).push(MaterialPageRoute(builder: (context){return Class12();}),)}),
            CustomListTile(Icons.library_books,'CSIT',()=>{{Navigator.of(context).pop()} , Navigator.of(context).push(MaterialPageRoute(builder: (context){return CSIT();}),)}),
-        ],
+           CustomListTile(Icons.share, 'Share', ()=>{Share.share('You can download this app from https://meropadai.com/')}),
+           CustomListTile(Icons.star, 'Rate This App', ()=>{launch("http://youtube.com")}),
+        ], 
       ), 
     );
   }
